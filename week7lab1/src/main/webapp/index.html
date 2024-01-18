@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Week 7 Lab 1</title>
+</head>
+<body>
+<h1>Week 7 Lab 1</h1>
+<script>
+    // Given an array of even and odd numbers, loop
+    // through the array and add even numbers to sum.
+    // If the number is odd, subtract the value from
+    // sum.
+    function weirdMath(array) {
+        var sum = 0;
+        // Your Code Starts Here
+
+        for (let num of array) if (num%2===0) sum += num; else sum -= num;
+
+
+        // Your Code Ends Here
+        return sum;
+    }
+
+    report(weirdMath([2,4,6,8,3]));
+
+    function report(sum) {
+        console.log(`Your Result = ${sum}`);
+
+        if (sum == 17) {
+            console.log("Correct!");
+        } else {
+            console.log('Incorrect!');
+            console.log('Expected :    17');
+        }
+    }
+</script>
+</body>
+</html>

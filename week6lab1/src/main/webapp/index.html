@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Week 6 Lab 1</title>
+</head>
+<body>
+<h1>Week 6 Lab 1</h1>
+<script>
+  // Given four mathematical operations +-*/
+  // Write the JavaScript to compute the solution
+  // Save the computation in the variable named result.
+  function calculate(num1, num2, operator) {
+    let result = "";
+
+    if (operator === "+") {
+      result = num1 + num2;
+    } else if (operator === "-") {
+      result = num1 - num2;
+    } else if (operator === "*") {
+      result = num1 * num2;
+    } else if (operator === "/") {
+      result = num1 / num2;
+    }
+
+    return result;
+  }
+
+  report(calculate(2,1,"+"),2,1,"+");
+  report(calculate(2,1,"-"),2,1,"-");
+  report(calculate(2,4,"*"),2,4,"*");
+  report(calculate(2,4,"/"),2,4,"/");
+
+  function report(solution, num1,num2,operator) {
+    console.log(`${num1} ${operator} ${num2} = ${solution}`);
+  }
+</script>
+</body>
+</html>

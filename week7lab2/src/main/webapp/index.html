@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Week 7 Lab 2</title>
+</head>
+<body>
+<h1>Week 7 Lab 2</h1>
+<script>
+  // Given a string "input" with numbers and letters,
+  // write the JavaScript to loop through the string.
+  // Inspect each character. If the character is a
+  // number, add it the variable labeled "sum." If it
+  // is not a number, concatenate the character to the
+  // variable "str."
+  // Place the value for sum in the array (arr[0]).
+  // Place the value for str in the array (arr[1]).
+  var sum = 0;
+  var str = "";
+
+  function calculate(input) {
+    var arr = [];
+    // Your Code Starts Here
+    for (let c of input) {
+      if (isNaN(c)) {
+        str += c;
+      } else {
+        sum += parseInt(c);
+      }
+    }
+    arr[0] = sum;
+    arr[1] = str;
+
+    // Your Code Ends Here
+    return arr;
+  }
+
+  report(calculate("12ooo3O4R2e2i9ll0yA6u7toP3ar4ts1"));
+
+  function report(arr) {
+    var result = JSON.stringify(arr);
+    console.log(`Your Result = ${result}`);
+
+    if (result == '[44,"oooOReillyAutoParts"]') {
+      console.log("Correct!");
+    } else {
+      console.log('Incorrect!');
+      console.log('Expected :    [44,"oooOReillyAutoParts"]');
+    }
+  }
+</script>
+</body>
+</html>
